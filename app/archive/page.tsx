@@ -11,7 +11,7 @@ import { projects, extendedProjects } from '@/lib/data';
 const allArchiveItems = [
   ...projects.map((p) => ({
     name: p.title,
-    stack: p.techStack.join(', '),
+    stack: (p.techStack ?? []).join(', '),
     year: p.year,
     github: p.github,
     category: p.category,
