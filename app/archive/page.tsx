@@ -280,7 +280,7 @@ export default function ArchivePage() {
                         <td className="pr-4">
                           <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                             <a
-                              href={proj.github}
+                              href={proj.github ?? '#'}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="btn-ghost text-xs py-1 px-2"
