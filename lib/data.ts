@@ -176,35 +176,34 @@ export const skills = {
 
 // ─── Projects ──────────────────────────────────────────────────────
 export interface Project {
-  slug:            string;
-  title:           string;
-  tagline:         string;
-  description:     string;
-  longDescription: string;
-  status:          'Completed' | 'In Progress' | 'Planning';
-  techStack:       string[];
-  category:        string;
-  github:          string | null;
-  liveDemo:        string | null;
-  featured:        boolean;
-  year:            number;
-  role:            string;
-  problem:         string;
-  solution:        string;
-  architecture:    string;
-  contribution?:   string[];
+  slug:              string;
+  title:             string;
+  tagline:           string;
+  description:       string;
+  longDescription:   string;
+  status:            'Completed' | 'In Progress' | 'Planning';
+  techStack?:        string[];
+  category:          string;
+  github:            string | null;
+  liveDemo:          string | null;
+  featured:          boolean;
+  year:              number;
+  role:              string;
+  problem?:          string;
+  solution:          string;
+  architecture?:     string;
+  contribution?:     string[];
   contributionNote?: string;
-  challenges:      string[];
-  learnings:       string[];
-  features:        string[];
-  metrics:         { label: string; value: string }[];
-  tech?:           string[];
-  techStack?:      string[];
-  highlights?:     string[];
+  challenges:        string[];
+  learnings:         string[];
+  features?:         string[];
+  metrics?:          { label: string; value: string }[];
+  highlights?:       string[];
   problemStatement?: string;
-  contributions?:  string[];
-  screenshots?:    string[];
+  contributions?:    string[];
+  screenshots?:      string[];
 }
+
 export const projects: Project[] = [
   {
     slug:  'college-exam-platform',
@@ -332,7 +331,7 @@ export const projects: Project[] = [
     techStack: ['Python', 'Django', 'SQLite', 'JavaScript', 'HTML', 'CSS'],
     category:  'Full-Stack',
     github:    'https://github.com/tripathik9559/Artistic_Avenue',
-    liveDemo: 'https://artistic-avenue.onrender.com/',
+    liveDemo:  'https://artistic-avenue.onrender.com/',
     featured:  true,
     year:      2023,
     role:      'Full-Stack Developer',
@@ -368,7 +367,7 @@ export const projects: Project[] = [
       'Responsive layout',
     ],
     metrics: [
-      { label: 'Framework', value: 'Django'     },
+      { label: 'Framework', value: 'Django'      },
       { label: 'Type',      value: 'Marketplace' },
       { label: 'Status',    value: 'Completed'   },
     ],
@@ -398,12 +397,12 @@ export const techStackIcons = [
 
 // ─── Navigation ─────────────────────────────────────────────────────
 export const navItems = [
-  { label: 'Home',     href: '/',         icon: 'home'    },
-  { label: 'About',    href: '/#about',   icon: 'user'    },
-  { label: 'Projects', href: '/#projects', icon: 'folder' },
-  { label: 'Skills',   href: '/skills',   icon: 'layers'  },
-  { label: 'Archive',  href: '/archive',  icon: 'archive' },
-  { label: 'Contact',  href: '/contact',  icon: 'mail'    },
+  { label: 'Home',     href: '/',          icon: 'home'    },
+  { label: 'About',    href: '/#about',    icon: 'user'    },
+  { label: 'Projects', href: '/#projects', icon: 'folder'  },
+  { label: 'Skills',   href: '/skills',    icon: 'layers'  },
+  { label: 'Archive',  href: '/archive',   icon: 'archive' },
+  { label: 'Contact',  href: '/contact',   icon: 'mail'    },
 ];
 
 // ─── Extended project entries for detail pages ───────────────────────
@@ -418,7 +417,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2024,
     role:        'Full-Stack Developer',
-    tech:        ['Node.js', 'Express', 'PostgreSQL', 'React', 'Railway', 'REST API'],
+    techStack:   ['Node.js', 'Express', 'PostgreSQL', 'React', 'Railway', 'REST API'],
     github:      'https://github.com/tripathik9559/taskflow-team-task-manager',
     liveDemo:    null,
     featured:    false,
@@ -459,7 +458,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2024,
     role:        'Data Analyst / ML Developer',
-    tech:        ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Linear Regression'],
+    techStack:   ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Linear Regression'],
     github:      'https://github.com/tripathik9559/Stock-Price-Prediction',
     liveDemo:    null,
     featured:    false,
@@ -499,7 +498,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2023,
     role:        'Data Analyst',
-    tech:        ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'NumPy', 'Jupyter Notebook'],
+    techStack:   ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'NumPy', 'Jupyter Notebook'],
     github:      'https://github.com/tripathik9559/IPL-Data-Analysis',
     liveDemo:    null,
     featured:    false,
@@ -539,7 +538,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2025,
     role:        'ML Developer',
-    tech:        ['Python', 'OpenCV', 'NumPy', 'YOLO / Haar Cascade', 'Computer Vision'],
+    techStack:   ['Python', 'OpenCV', 'NumPy', 'YOLO / Haar Cascade', 'Computer Vision'],
     github:      'https://github.com/tripathik9559/Smart-Object-Detection',
     liveDemo:    null,
     featured:    false,
@@ -579,8 +578,8 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2026,
     role:        'AI/ML Developer',
-    tech:        ['Python', 'BERT', 'Transformers', 'LLM', 'HuggingFace', 'NLP', 'scikit-learn'],
-    github:      'https://github.com/tripathik9559/ai-honeypot-scam-detection ',
+    techStack:   ['Python', 'BERT', 'Transformers', 'LLM', 'HuggingFace', 'NLP', 'scikit-learn'],
+    github:      'https://github.com/tripathik9559/ai-honeypot-scam-detection',
     liveDemo:    null,
     featured:    false,
     highlights:  [
@@ -619,7 +618,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2023,
     role:        'Frontend Developer',
-    tech:        ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design', 'DOM Manipulation'],
+    techStack:   ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design', 'DOM Manipulation'],
     github:      'https://github.com/tripathik9559/eSEHAT-NABHA',
     liveDemo:    null,
     featured:    false,
@@ -659,7 +658,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2023,
     role:        'Frontend Developer',
-    tech:        ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'LocalStorage'],
+    techStack:   ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'LocalStorage'],
     github:      'https://github.com/tripathik9559/JOB_PORTAL',
     liveDemo:    null,
     featured:    false,
@@ -699,7 +698,7 @@ export const extendedProjects: Project[] = [
     status:      'Completed',
     year:        2023,
     role:        'Frontend Developer',
-    tech:        ['HTML5', 'CSS3', 'JavaScript', 'CSS Animations', 'Flexbox', 'Grid'],
+    techStack:   ['HTML5', 'CSS3', 'JavaScript', 'CSS Animations', 'Flexbox', 'Grid'],
     github:      'https://github.com/tripathik9559/prototype-frontend',
     liveDemo:    null,
     featured:    false,
