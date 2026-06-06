@@ -184,7 +184,7 @@ export interface Project {
   status:          'Completed' | 'In Progress' | 'Planning';
   techStack:       string[];
   category:        string;
-  github:          string;
+  github:          string | null;
   liveDemo:        string | null;
   featured:        boolean;
   year:            number;
@@ -198,8 +198,13 @@ export interface Project {
   learnings:       string[];
   features:        string[];
   metrics:         { label: string; value: string }[];
+  tech?:           string[];
+  techStack?:      string[];
+  highlights?:     string[];
+  problemStatement?: string;
+  contributions?:  string[];
+  screenshots?:    string[];
 }
-
 export const projects: Project[] = [
   {
     slug:  'college-exam-platform',
