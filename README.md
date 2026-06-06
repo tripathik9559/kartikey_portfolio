@@ -1,183 +1,233 @@
-# Kartikey Kumar Tripathi — Premium Portfolio
+<div align="center">
 
-A premium AI-startup-dashboard-style portfolio built with **Next.js 14 + TypeScript + Tailwind CSS**.
+```
+██╗  ██╗██╗  ██╗████████╗
+██║ ██╔╝██║ ██╔╝╚══██╔══╝
+█████╔╝ █████╔╝    ██║   
+██╔═██╗ ██╔═██╗    ██║   
+██║  ██╗██║  ██╗   ██║   
+╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+```
+
+# Kartikey Kumar Tripathi — Portfolio
+
+**GenAI Engineer & Software Developer**
+
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-kartikey--tripathi--portfolio.netlify.app-3B82F6?style=for-the-badge&logoColor=white)](https://kartikey-tripathi-portfolio.netlify.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kartikey-kumar-tripathi-92912b29b)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tripathik9559)
+[![Netlify](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://kartikey-tripathi-portfolio.netlify.app/)
+
+</div>
+
+---
+
+<div align="center">
+
+### ⚡ Built like a startup dashboard. Feels like a product.
+
+*A premium AI-dashboard-style portfolio — 3-column layout, orbital animations,*
+*live particle fields, and full project case studies. All in Next.js 14.*
+
+</div>
+
+---
+
+## 🖥️ Preview
+
+```
+┌─────────────┬──────────────────────────────────┬──────────────────┐
+│             │                                  │                  │
+│  SIDEBAR    │         MAIN CONTENT             │   RIGHT PANEL    │
+│             │                                  │                  │
+│  • Nav      │  Hero  →  About  →  Projects     │  • GitHub Stats  │
+│  • Socials  │  Skills  →  Archive  →  Contact  │  • Timeline      │
+│  • Resume   │                                  │  • Learning      │
+│             │                                  │                  │
+└─────────────┴──────────────────────────────────┴──────────────────┘
+```
 
 ---
 
 ## ✨ Features
 
-- **3-Column Dashboard Layout** — Fixed sidebar + scrollable main + live insights panel
-- **Orbit Animation** — Profile image with orbiting tech icons & glowing rings
-- **Canvas Particle Field** — Animated particles drifting in the hero background
-- **Cursor Glow** — Radial blue glow follows the mouse
-- **Project Case Studies** — Full detail pages with problem / solution / architecture
-- **Skills Grid** — Category cards with learning journey timeline
-- **Searchable Archive** — Filter & sort all projects by name, tech, category, year
-- **Contact Page** — Contact cards + animated form + paper plane
-- **Mobile Menu** — Full-screen overlay navigation
-- **Scroll Reveal** — Sections animate in as they enter the viewport
+| Feature | Description |
+|---|---|
+| 🎯 **3-Column Dashboard** | Fixed sidebar + scrollable main + live insights panel |
+| 🌀 **Orbit Animation** | Profile image with orbiting tech stack icons & glowing rings |
+| ✨ **Particle Field** | Canvas-based animated particles in the hero background |
+| 🖱️ **Cursor Glow** | Radial blue glow that follows mouse movement |
+| 📂 **Project Case Studies** | Full detail pages — problem / solution / architecture |
+| 🧠 **Skills Grid** | Category cards with animated learning journey timeline |
+| 🔍 **Searchable Archive** | Filter & sort all 11 projects by name, tech, category, year |
+| 📬 **Contact Page** | Animated contact form with paper plane send effect |
+| 📱 **Mobile Menu** | Full-screen overlay navigation for mobile |
+| 🎬 **Scroll Reveal** | Sections animate in as they enter the viewport |
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-# 1. Install dependencies
+# Clone the repo
+git clone https://github.com/tripathik9559/kartikey-kumar-tripathi-portfolio.git
+cd kartikey-kumar-tripathi-portfolio
+
+# Install dependencies
 npm install
 
-# 2. Start development server
+# Start dev server
 npm run dev
-
-# 3. Open in browser
-# http://localhost:3000
 ```
+
+Open **http://localhost:3000** and you're in. 🎉
 
 ---
 
 ## 📁 Project Structure
 
 ```
-app/
-  page.tsx                   # Homepage (hero + about + projects + skills + archive + contact)
-  layout.tsx                 # Root layout with Google Fonts
-  globals.css                # All custom CSS — animations, design tokens, layout
-  not-found.tsx              # 404 page
-  projects/[slug]/page.tsx   # Dynamic project case study pages
-  skills/page.tsx            # Full skills page
-  archive/page.tsx           # Searchable project archive
-  contact/page.tsx           # Contact page with form
-
-components/
-  layout/
-    Sidebar.tsx              # Fixed left sidebar — logo, nav, social, resume
-    RightPanel.tsx           # Fixed right insights panel — metrics, timeline, GitHub
-    MainLayout.tsx           # 3-column shell + mobile menu
-  home/
-    HeroSection.tsx          # Full-screen hero with orbit + particles + CTAs
-    OrbitAnimation.tsx       # Profile image with orbiting tech icons
-    ParticleField.tsx        # Canvas-based particle background
-    AboutSection.tsx         # About section — bio + capability cards
-    FeaturedProjects.tsx     # Featured project cards
-  skills/
-    SkillsPreview.tsx        # Skills preview on homepage
-  projects/
-    ArchivePreview.tsx       # Archive table preview on homepage
-  contact/
-    ContactPreview.tsx       # Contact CTA section on homepage
-  ui/
-    AnimatedSection.tsx      # Scroll-reveal wrapper component
-    CursorGlow.tsx           # Mouse-following glow effect
-
-lib/
-  data.ts                    # All portfolio content — projects, skills, timeline
-```
-
----
-
-## 🎨 Customisation Guide
-
-### 1. Update Personal Info
-Edit `lib/data.ts` → `personalInfo` object:
-```ts
-export const personalInfo = {
-  name: 'Your Name',
-  email: 'your@email.com',
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourprofile',
-  // ...
-};
-```
-
-### 2. Add / Edit Projects
-Edit `lib/data.ts` → `projects` array. Each project has:
-- `slug` — URL path (`/projects/your-slug`)
-- `title`, `tagline`, `description`, `longDescription`
-- `status` — `'Completed'` | `'In Progress'` | `'Planning'`
-- `techStack` — array of strings
-- `github`, `liveDemo` — links
-- `problem`, `solution`, `architecture` — case study content
-- `challenges`, `learnings`, `features`, `metrics`
-
-### 3. Add Profile Photo
-Replace the placeholder in `components/home/OrbitAnimation.tsx`:
-```tsx
-// Remove the <User> icon + "Add Photo" span
-// Add:
-<Image
-  src="/profile.jpg"
-  alt="Kartikey Kumar Tripathi"
-  fill
-  className="rounded-full object-cover"
-  style={{ objectPosition: 'top' }}
-/>
-```
-Place `profile.jpg` in `/public/`.
-
-### 4. Add Resume PDF
-1. Place `resume.pdf` in `/public/`
-2. In `components/layout/Sidebar.tsx`, replace the alert:
-```tsx
-// Change:
-onClick={() => alert('Resume will be added soon!')}
-// To:
-href="/resume.pdf"
-target="_blank"
-```
-
-### 5. Add Project Screenshots
-In `app/projects/[slug]/page.tsx`, replace the screenshot placeholders with:
-```tsx
-<Image src="/screenshots/project-name-1.png" alt="..." fill className="object-cover" />
-```
-
-### 6. Connect Contact Form
-In `app/contact/page.tsx`, replace the fake `handleSubmit` with:
-```ts
-// Option A — Formspree
-const res = await fetch('https://formspree.io/f/YOUR_ID', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(form),
-});
-
-// Option B — EmailJS
-// npm install @emailjs/browser
-```
-
-### 7. Add Architecture Diagrams
-In each project detail page, replace the dashed placeholder boxes with:
-```tsx
-<Image src={`/diagrams/${project.slug}-arch.png`} alt="Architecture" ... />
+📦 portfolio/
+├── 📂 app/
+│   ├── page.tsx                    # Homepage — hero, about, projects, skills
+│   ├── layout.tsx                  # Root layout with Google Fonts
+│   ├── globals.css                 # Design tokens, animations, layout
+│   ├── not-found.tsx               # 404 page
+│   ├── projects/[slug]/page.tsx    # Dynamic project case study pages
+│   ├── skills/page.tsx             # Full skills page
+│   ├── archive/page.tsx            # Searchable project archive
+│   └── contact/page.tsx            # Contact page with form
+│
+├── 📂 components/
+│   ├── layout/
+│   │   ├── Sidebar.tsx             # Fixed left sidebar
+│   │   ├── RightPanel.tsx          # Fixed right insights panel
+│   │   └── MainLayout.tsx          # 3-column shell + mobile menu
+│   ├── home/
+│   │   ├── HeroSection.tsx         # Full-screen hero
+│   │   ├── OrbitAnimation.tsx      # Orbiting tech icons
+│   │   ├── ParticleField.tsx       # Canvas particle background
+│   │   ├── AboutSection.tsx        # Bio + capability cards
+│   │   └── FeaturedProjects.tsx    # Project cards
+│   └── ui/
+│       ├── AnimatedSection.tsx     # Scroll-reveal wrapper
+│       └── CursorGlow.tsx          # Mouse glow effect
+│
+└── 📂 lib/
+    └── data.ts                     # All content — projects, skills, timeline
 ```
 
 ---
 
 ## 🎨 Design System
 
-| Token             | Value           |
-|-------------------|-----------------|
-| Background        | `#070B14`       |
-| Card bg           | `rgba(15,22,42,0.8)` |
-| Primary blue      | `#3B82F6`       |
-| Cyan accent       | `#06B6D4`       |
-| Violet accent     | `#8B5CF6`       |
-| Text primary      | `#F0F4FF`       |
-| Text secondary    | `#94A3B8`       |
-| Text dim          | `#4B5E7A`       |
-| Heading font      | Syne            |
-| Body font         | Outfit          |
-| Code font         | JetBrains Mono  |
+<div align="center">
+
+| Token | Value | Preview |
+|---|---|---|
+| Background | `#070B14` | ⬛ Deep navy black |
+| Card bg | `rgba(15,22,42,0.8)` | 🟦 Glass card |
+| Primary blue | `#3B82F6` | 🔵 Electric blue |
+| Cyan accent | `#06B6D4` | 🩵 Cyan |
+| Violet accent | `#8B5CF6` | 🟣 Violet |
+| Text primary | `#F0F4FF` | ⬜ Soft white |
+| Heading font | **Syne** | Bold & geometric |
+| Body font | **Outfit** | Clean & modern |
+| Code font | **JetBrains Mono** | Developer-grade |
+
+</div>
 
 ---
 
-## 📦 Build for Production
+## 🛠️ Tech Stack
 
-```bash
-npm run build
-npm run start
+```
+Next.js 14 (App Router)   →  Framework
+TypeScript                →  Type safety
+Tailwind CSS 3            →  Styling
+Lucide React              →  Icons
+CSS Keyframes             →  Animations
+IntersectionObserver      →  Scroll reveal
+Canvas API                →  Particle field
 ```
 
-### Deploy to Vercel (Recommended)
+---
+
+## 📊 Projects Showcased
+
+| Project | Stack | Status |
+|---|---|---|
+| 🎓 College Exam Platform | Django · PostgreSQL · Redis · Docker | ✅ Live |
+| 🚆 AI Train Traffic Control | Django · MySQL · AI/ML | 🔄 In Progress |
+| 🎨 Artistic Avenue | Django · SQLite · JavaScript | ✅ Live |
+| 📋 Taskflow Team Manager | Node.js · Express · React · PostgreSQL | ✅ Completed |
+| 📈 Stock Price Prediction | Python · Scikit-learn · Pandas | ✅ Completed |
+| 🏏 IPL Data Analysis | Python · Pandas · Matplotlib | ✅ Completed |
+| 👁️ Smart Object Detection | Python · OpenCV · YOLO | ✅ Completed |
+| 🛡️ AI Honeypot Scam Detection | Python · BERT · HuggingFace | ✅ Completed |
+
+---
+
+## ⚙️ Customisation
+
+### Update Personal Info
+```ts
+// lib/data.ts
+export const personalInfo = {
+  name: 'Your Name',
+  email: 'your@email.com',
+  github: 'https://github.com/yourusername',
+  linkedin: 'https://linkedin.com/in/yourprofile',
+};
+```
+
+### Add a Project
+```ts
+// lib/data.ts → projects array
+{
+  slug:        'your-project',
+  title:       'Your Project Title',
+  techStack:   ['Python', 'Django', 'PostgreSQL'],
+  status:      'Completed',
+  github:      'https://github.com/you/project',
+  liveDemo:    'https://yourproject.com',
+  // ... problem, solution, architecture, challenges, learnings
+}
+```
+
+### Add Profile Photo
+```tsx
+// components/home/OrbitAnimation.tsx
+<Image
+  src="/profile.jpg"
+  alt="Your Name"
+  fill
+  className="rounded-full object-cover"
+/>
+```
+Place `profile.jpg` in `/public/`.
+
+### Connect Contact Form
+```ts
+// app/contact/page.tsx — replace handleSubmit
+const res = await fetch('https://formspree.io/f/YOUR_ID', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(form),
+});
+```
+
+---
+
+## 🚢 Deployment
+
+### Netlify (Current)
+```bash
+# Auto-deploys on every push to main
+git push origin main
+```
+
+### Vercel (Alternative)
 ```bash
 npm install -g vercel
 vercel --prod
@@ -185,23 +235,28 @@ vercel --prod
 
 ---
 
-## 🔧 Tech Stack
+## 📬 Contact
 
-| Layer      | Technology          |
-|------------|---------------------|
-| Framework  | Next.js 14 (App Router) |
-| Language   | TypeScript          |
-| Styling    | Tailwind CSS 3      |
-| Icons      | Lucide React        |
-| Fonts      | Google Fonts (Syne, Outfit, JetBrains Mono) |
-| Animation  | CSS Keyframes + IntersectionObserver |
+<div align="center">
 
----
+| Channel | Link |
+|---|---|
+| 🌐 Portfolio | [kartikey-tripathi-portfolio.netlify.app](https://kartikey-tripathi-portfolio.netlify.app/) |
+| 📧 Email | tripathik9559@gmail.com |
+| 💼 LinkedIn | [kartikey-kumar-tripathi](https://www.linkedin.com/in/kartikey-kumar-tripathi-92912b29b) |
+| 🐙 GitHub | [@tripathik9559](https://github.com/tripathik9559) |
+| 📍 Location | Lucknow, Uttar Pradesh, India |
 
-## 📝 License
-
-MIT — feel free to use and adapt.
+</div>
 
 ---
 
-Built with ❤️ for **Kartikey Kumar Tripathi** | GenAI Engineer & Software Developer
+<div align="center">
+
+**Built with 🧠 by Kartikey Kumar Tripathi**
+
+*B.Tech CSE · BBDNIIT · 2022–2026*
+
+⭐ **Star this repo if you found it useful!**
+
+</div>
