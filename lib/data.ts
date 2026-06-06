@@ -182,7 +182,7 @@ export interface Project {
   description:       string;
   longDescription:   string;
   status:            'Completed' | 'In Progress' | 'Planning';
-  techStack?:        string[];
+  techStack: string[];
   category:          string;
   github:            string | null;
   liveDemo:          string | null;
