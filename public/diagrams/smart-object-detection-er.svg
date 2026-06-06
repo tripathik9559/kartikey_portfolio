@@ -1,0 +1,59 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Courier New',monospace"><rect width="820" height="300" fill="#070B14" rx="12"/>
+  <rect x="14" y="20" width="180" height="145" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+  <rect x="14" y="20" width="180" height="28" rx="8" fill="rgba(59,130,246,0.18)"/>
+  <text x="104" y="38" fill="#93C5FD" font-size="10.5" text-anchor="middle" font-weight="700">📹 VIDEO_STREAM</text>
+  <text x="22" y="64" fill="#FBBF24" font-size="8.5">🔑 stream_id</text>
+  <text x="22" y="79" fill="#94A3B8" font-size="8.5">  source_type (cam/file/image)</text>
+  <text x="22" y="93" fill="#94A3B8" font-size="8.5">  resolution (w × h)</text>
+  <text x="22" y="107" fill="#94A3B8" font-size="8.5">  fps_target</text>
+  <text x="22" y="121" fill="#94A3B8" font-size="8.5">  start_timestamp</text>
+  <text x="22" y="135" fill="#94A3B8" font-size="8.5">  filepath (if file source)</text>
+  <text x="22" y="149" fill="#94A3B8" font-size="8.5">  total_frames</text>
+
+  <rect x="265" y="20" width="185" height="160" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
+  <rect x="265" y="20" width="185" height="28" rx="8" fill="rgba(139,92,246,0.18)"/>
+  <text x="357" y="38" fill="#C4B5FD" font-size="10.5" text-anchor="middle" font-weight="700">🖼 FRAME</text>
+  <text x="273" y="64" fill="#FBBF24" font-size="8.5">🔑 frame_id</text>
+  <text x="273" y="79" fill="#F87171" font-size="8.5">🔗 stream_id (FK)</text>
+  <text x="273" y="93" fill="#94A3B8" font-size="8.5">  frame_number</text>
+  <text x="273" y="107" fill="#94A3B8" font-size="8.5">  timestamp_ms</text>
+  <text x="273" y="121" fill="#94A3B8" font-size="8.5">  raw_pixels (ndarray ref)</text>
+  <text x="273" y="135" fill="#94A3B8" font-size="8.5">  fps_actual</text>
+  <text x="273" y="149" fill="#94A3B8" font-size="8.5">  objects_detected (count)</text>
+  <text x="273" y="163" fill="#94A3B8" font-size="8.5">  inference_time_ms</text>
+
+  <rect x="520" y="20" width="185" height="175" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+  <rect x="520" y="20" width="185" height="28" rx="8" fill="rgba(6,182,212,0.18)"/>
+  <text x="612" y="38" fill="#67E8F9" font-size="10.5" text-anchor="middle" font-weight="700">📦 DETECTION</text>
+  <text x="528" y="64" fill="#FBBF24" font-size="8.5">🔑 detection_id</text>
+  <text x="528" y="79" fill="#F87171" font-size="8.5">🔗 frame_id (FK)</text>
+  <text x="528" y="93" fill="#F87171" font-size="8.5">🔗 class_id (FK→ObjectClass)</text>
+  <text x="528" y="107" fill="#94A3B8" font-size="8.5">  bbox_x · bbox_y</text>
+  <text x="528" y="121" fill="#94A3B8" font-size="8.5">  bbox_w · bbox_h</text>
+  <text x="528" y="135" fill="#94A3B8" font-size="8.5">  confidence_score</text>
+  <text x="528" y="149" fill="#94A3B8" font-size="8.5">  label_text</text>
+  <text x="528" y="163" fill="#94A3B8" font-size="8.5">  color_assigned</text>
+  <text x="528" y="177" fill="#94A3B8" font-size="8.5">  is_tracked</text>
+
+  <rect x="14" y="185" width="180" height="105" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(68,183,139,0.45)" stroke-width="1.5"/>
+  <rect x="14" y="185" width="180" height="28" rx="8" fill="rgba(68,183,139,0.15)"/>
+  <text x="104" y="203" fill="#6EE7B7" font-size="10.5" text-anchor="middle" font-weight="700">🤖 MODEL_CONFIG</text>
+  <text x="22" y="229" fill="#94A3B8" font-size="8.5">  model_name (YOLO/Haar)</text>
+  <text x="22" y="244" fill="#94A3B8" font-size="8.5">  weights_path</text>
+  <text x="22" y="259" fill="#94A3B8" font-size="8.5">  confidence_threshold</text>
+  <text x="22" y="274" fill="#94A3B8" font-size="8.5">  nms_threshold</text>
+
+  <rect x="520" y="210" width="185" height="80" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(245,158,11,0.4)" stroke-width="1.5"/>
+  <rect x="520" y="210" width="185" height="28" rx="8" fill="rgba(245,158,11,0.12)"/>
+  <text x="612" y="228" fill="#FCD34D" font-size="10.5" text-anchor="middle" font-weight="700">🏷 OBJECT_CLASS</text>
+  <text x="528" y="254" fill="#FBBF24" font-size="8.5">🔑 class_id</text>
+  <text x="528" y="269" fill="#94A3B8" font-size="8.5">  class_name (person/car…)</text>
+  <text x="528" y="284" fill="#94A3B8" font-size="8.5">  supercategory</text>
+
+  <line x1="194" y1="90" x2="265" y2="100" stroke="#8B5CF6" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="229" y="88" fill="#8B5CF6" font-size="8" text-anchor="middle">1:M</text>
+  <line x1="450" y1="100" x2="520" y2="100" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="485" y="94" fill="#06B6D4" font-size="8" text-anchor="middle">1:M</text>
+  <line x1="612" y1="195" x2="612" y2="210" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="626" y="205" fill="#F59E0B" font-size="8">M:1</text>
+</svg>

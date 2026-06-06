@@ -1,0 +1,88 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Courier New',monospace">
+  <rect width="820" height="300" fill="#070B14" rx="12"/>
+
+  <!-- USER table -->
+  <rect x="14" y="20" width="148" height="160" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+  <rect x="14" y="20" width="148" height="28" rx="8" fill="rgba(59,130,246,0.2)"/>
+  <rect x="14" y="40" width="148" height="8" fill="rgba(59,130,246,0.2)"/>
+  <text x="88" y="38" fill="#93C5FD" font-size="10.5" text-anchor="middle" font-weight="700">👤 USER</text>
+  <text x="22" y="66" fill="#FBBF24" font-size="8.5">🔑 id (PK)</text>
+  <text x="22" y="82" fill="#94A3B8" font-size="8.5">  username</text>
+  <text x="22" y="96" fill="#94A3B8" font-size="8.5">  email</text>
+  <text x="22" y="110" fill="#94A3B8" font-size="8.5">  password_hash</text>
+  <text x="22" y="124" fill="#34D399" font-size="8.5">  role (ENUM)</text>
+  <text x="22" y="138" fill="#94A3B8" font-size="8.5">  face_encoding</text>
+  <text x="22" y="152" fill="#94A3B8" font-size="8.5">  created_at</text>
+  <text x="22" y="166" fill="#94A3B8" font-size="8.5">  is_active</text>
+
+  <!-- EXAM table -->
+  <rect x="220" y="20" width="154" height="175" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
+  <rect x="220" y="20" width="154" height="28" rx="8" fill="rgba(139,92,246,0.2)"/>
+  <rect x="220" y="40" width="154" height="8" fill="rgba(139,92,246,0.2)"/>
+  <text x="297" y="38" fill="#C4B5FD" font-size="10.5" text-anchor="middle" font-weight="700">📋 EXAM</text>
+  <text x="228" y="66" fill="#FBBF24" font-size="8.5">🔑 id (PK)</text>
+  <text x="228" y="82" fill="#F87171" font-size="8.5">🔗 created_by (FK→User)</text>
+  <text x="228" y="96" fill="#94A3B8" font-size="8.5">  title</text>
+  <text x="228" y="110" fill="#94A3B8" font-size="8.5">  subject</text>
+  <text x="228" y="124" fill="#94A3B8" font-size="8.5">  start_time</text>
+  <text x="228" y="138" fill="#94A3B8" font-size="8.5">  duration_min</text>
+  <text x="228" y="152" fill="#94A3B8" font-size="8.5">  total_marks</text>
+  <text x="228" y="166" fill="#34D399" font-size="8.5">  status (ENUM)</text>
+  <text x="228" y="180" fill="#94A3B8" font-size="8.5">  answer_key_url</text>
+
+  <!-- QUESTION table -->
+  <rect x="440" y="20" width="154" height="160" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+  <rect x="440" y="20" width="154" height="28" rx="8" fill="rgba(6,182,212,0.2)"/>
+  <rect x="440" y="40" width="154" height="8" fill="rgba(6,182,212,0.2)"/>
+  <text x="517" y="38" fill="#67E8F9" font-size="10.5" text-anchor="middle" font-weight="700">❓ QUESTION</text>
+  <text x="448" y="66" fill="#FBBF24" font-size="8.5">🔑 id (PK)</text>
+  <text x="448" y="82" fill="#F87171" font-size="8.5">🔗 exam_id (FK→Exam)</text>
+  <text x="448" y="96" fill="#94A3B8" font-size="8.5">  question_text</text>
+  <text x="448" y="110" fill="#94A3B8" font-size="8.5">  option_a</text>
+  <text x="448" y="124" fill="#94A3B8" font-size="8.5">  option_b</text>
+  <text x="448" y="138" fill="#94A3B8" font-size="8.5">  option_c</text>
+  <text x="448" y="152" fill="#94A3B8" font-size="8.5">  option_d</text>
+  <text x="448" y="166" fill="#94A3B8" font-size="8.5">  marks</text>
+
+  <!-- SUBMISSION table -->
+  <rect x="220" y="215" width="160" height="75" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(16,185,129,0.5)" stroke-width="1.5"/>
+  <rect x="220" y="215" width="160" height="28" rx="8" fill="rgba(16,185,129,0.15)"/>
+  <rect x="220" y="235" width="160" height="8" fill="rgba(16,185,129,0.15)"/>
+  <text x="300" y="233" fill="#6EE7B7" font-size="10.5" text-anchor="middle" font-weight="700">📝 SUBMISSION</text>
+  <text x="228" y="258" fill="#FBBF24" font-size="8.5">🔑 id (PK)</text>
+  <text x="228" y="272" fill="#F87171" font-size="8.5">🔗 student_id · exam_id (FK)</text>
+  <text x="228" y="286" fill="#94A3B8" font-size="8.5">  answers_json · score · submitted_at</text>
+
+  <!-- SESSION table -->
+  <rect x="620" y="20" width="185" height="120" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(245,158,11,0.4)" stroke-width="1.5"/>
+  <rect x="620" y="20" width="185" height="28" rx="8" fill="rgba(245,158,11,0.15)"/>
+  <rect x="620" y="40" width="185" height="8" fill="rgba(245,158,11,0.15)"/>
+  <text x="712" y="38" fill="#FCD34D" font-size="10.5" text-anchor="middle" font-weight="700">⚡ EXAM SESSION (Redis)</text>
+  <text x="628" y="66" fill="#FBBF24" font-size="8.5">🔑 session_key</text>
+  <text x="628" y="82" fill="#94A3B8" font-size="8.5">  student_id</text>
+  <text x="628" y="96" fill="#94A3B8" font-size="8.5">  exam_id</text>
+  <text x="628" y="110" fill="#94A3B8" font-size="8.5">  time_remaining</text>
+  <text x="628" y="124" fill="#94A3B8" font-size="8.5">  TTL (auto-expire)</text>
+
+  <!-- Relation lines -->
+  <!-- User → Exam (1:M) -->
+  <line x1="162" y1="80" x2="220" y2="80" stroke="#8B5CF6" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="191" y="74" fill="#8B5CF6" font-size="8" text-anchor="middle">1:M</text>
+
+  <!-- User → Submission -->
+  <line x1="88" y1="180" x2="88" y2="243" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="88" y1="243" x2="220" y2="243" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="150" y="238" fill="#10B981" font-size="8" text-anchor="middle">1:M</text>
+
+  <!-- Exam → Question (1:M) -->
+  <line x1="374" y1="70" x2="440" y2="70" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="407" y="64" fill="#06B6D4" font-size="8" text-anchor="middle">1:M</text>
+
+  <!-- Exam → Submission -->
+  <line x1="297" y1="195" x2="297" y2="215" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="310" y="210" fill="#10B981" font-size="8">1:M</text>
+
+  <!-- Exam → Session (Redis) -->
+  <line x1="374" y1="130" x2="620" y2="80" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="497" y="95" fill="#F59E0B" font-size="8" text-anchor="middle">uses</text>
+</svg>

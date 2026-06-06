@@ -1,0 +1,59 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Courier New',monospace">
+  <rect width="820" height="300" fill="#070B14" rx="12"/>
+  <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/></marker></defs>
+  <rect x="14" y="30" width="145" height="160" rx="10" fill="rgba(15,22,42,0.9)" stroke="rgba(59,130,246,0.4)" stroke-width="1.5"/>
+  <rect x="14" y="30" width="145" height="28" rx="10" fill="rgba(59,130,246,0.15)"/>
+  <text x="86" y="48" fill="#93C5FD" font-size="10" text-anchor="middle" font-weight="700">📊 Data Source</text>
+  <text x="24" y="74" fill="#64748B" font-size="8">Yahoo Finance CSV</text>
+  <text x="24" y="88" fill="#64748B" font-size="8">OHLCV columns:</text>
+  <text x="24" y="102" fill="#475569" font-size="8">Open · High · Low</text>
+  <text x="24" y="116" fill="#475569" font-size="8">Close · Volume</text>
+  <text x="24" y="130" fill="#475569" font-size="8">Date index</text>
+  <text x="24" y="150" fill="#334155" font-size="7.5">Historical price data</text>
+  <text x="24" y="164" fill="#334155" font-size="7.5">Multiple tickers</text>
+
+  <line x1="159" y1="110" x2="224" y2="110" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="191" y="104" fill="#3B82F6" font-size="8" text-anchor="middle">load</text>
+
+  <rect x="228" y="20" width="190" height="260" rx="10" fill="rgba(10,16,30,0.95)" stroke="rgba(68,183,139,0.5)" stroke-width="1.5"/>
+  <rect x="228" y="20" width="190" height="30" rx="10" fill="rgba(68,183,139,0.2)"/>
+  <text x="323" y="39" fill="#6EE7B7" font-size="10.5" text-anchor="middle" font-weight="700">🐍 Python Pipeline</text>
+  <text x="238" y="68" fill="#94A3B8" font-size="8.5">1. Data Ingestion</text>
+  <text x="238" y="83" fill="#64748B" font-size="8">   pd.read_csv() · parse_dates</text>
+  <text x="238" y="103" fill="#94A3B8" font-size="8.5">2. Preprocessing</text>
+  <text x="238" y="118" fill="#64748B" font-size="8">   fillna · dropna · normalize</text>
+  <text x="238" y="138" fill="#94A3B8" font-size="8.5">3. Feature Engineering</text>
+  <text x="238" y="153" fill="#64748B" font-size="8">   Moving avg · Lag features</text>
+  <text x="238" y="168" fill="#64748B" font-size="8">   Price delta · Volume ratio</text>
+  <text x="238" y="188" fill="#94A3B8" font-size="8.5">4. Train/Test Split</text>
+  <text x="238" y="203" fill="#64748B" font-size="8">   80/20 chronological split</text>
+  <text x="238" y="223" fill="#94A3B8" font-size="8.5">5. Model Training</text>
+  <text x="238" y="238" fill="#64748B" font-size="8">   LinearRegression().fit()</text>
+  <text x="238" y="258" fill="#334155" font-size="7.5">Pandas · NumPy · scikit-learn</text>
+  <text x="238" y="272" fill="#334155" font-size="7.5">Jupyter Notebook</text>
+
+  <line x1="418" y1="140" x2="478" y2="120" stroke="#06B6D4" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="418" y1="200" x2="478" y2="220" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="482" y="30" width="175" height="140" rx="10" fill="rgba(15,22,42,0.9)" stroke="rgba(6,182,212,0.45)" stroke-width="1.5"/>
+  <rect x="482" y="30" width="175" height="28" rx="10" fill="rgba(6,182,212,0.15)"/>
+  <text x="569" y="48" fill="#67E8F9" font-size="10" text-anchor="middle" font-weight="700">📈 Model Output</text>
+  <text x="490" y="74" fill="#64748B" font-size="8">Predicted Close Price</text>
+  <text x="490" y="88" fill="#64748B" font-size="8">Actual vs Predicted plot</text>
+  <text x="490" y="102" fill="#64748B" font-size="8">MAE / RMSE metrics</text>
+  <text x="490" y="116" fill="#64748B" font-size="8">Residual error chart</text>
+  <text x="490" y="136" fill="#334155" font-size="7.5">scikit-learn LinearRegression</text>
+  <text x="490" y="150" fill="#334155" font-size="7.5">R² Score evaluation</text>
+
+  <rect x="482" y="186" width="175" height="110" rx="10" fill="rgba(15,22,42,0.9)" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+  <rect x="482" y="186" width="175" height="28" rx="10" fill="rgba(139,92,246,0.15)"/>
+  <text x="569" y="204" fill="#C4B5FD" font-size="10" text-anchor="middle" font-weight="700">📊 Visualisation</text>
+  <text x="490" y="228" fill="#64748B" font-size="8">Matplotlib line charts</text>
+  <text x="490" y="242" fill="#64748B" font-size="8">Price trend over time</text>
+  <text x="490" y="256" fill="#64748B" font-size="8">Prediction overlay</text>
+  <text x="490" y="270" fill="#334155" font-size="7.5">Matplotlib · Jupyter</text>
+
+  <rect x="680" y="14" width="86" height="20" rx="4" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+  <text x="723" y="27" fill="#10B981" font-size="8.5" text-anchor="middle">✓ Completed</text>
+
+</svg>

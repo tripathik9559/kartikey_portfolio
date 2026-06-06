@@ -1,0 +1,57 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Courier New',monospace"><rect width="820" height="300" fill="#070B14" rx="12"/>
+  <rect x="14" y="20" width="180" height="165" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+  <rect x="14" y="20" width="180" height="28" rx="8" fill="rgba(59,130,246,0.18)"/>
+  <text x="104" y="38" fill="#93C5FD" font-size="10.5" text-anchor="middle" font-weight="700">💼 JOB_LISTING</text>
+  <text x="22" y="64" fill="#FBBF24" font-size="8.5">🔑 job_id</text>
+  <text x="22" y="79" fill="#94A3B8" font-size="8.5">  title</text>
+  <text x="22" y="93" fill="#94A3B8" font-size="8.5">  company · location</text>
+  <text x="22" y="107" fill="#94A3B8" font-size="8.5">  salary_range</text>
+  <text x="22" y="121" fill="#34D399" font-size="8.5">  type (full/part/remote)</text>
+  <text x="22" y="135" fill="#34D399" font-size="8.5">  category (tech/design…)</text>
+  <text x="22" y="149" fill="#94A3B8" font-size="8.5">  description</text>
+  <text x="22" y="163" fill="#94A3B8" font-size="8.5">  posted_date · deadline</text>
+
+  <rect x="262" y="20" width="185" height="150" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
+  <rect x="262" y="20" width="185" height="28" rx="8" fill="rgba(139,92,246,0.18)"/>
+  <text x="354" y="38" fill="#C4B5FD" font-size="10.5" text-anchor="middle" font-weight="700">📝 APPLICATION</text>
+  <text x="270" y="64" fill="#FBBF24" font-size="8.5">🔑 app_id</text>
+  <text x="270" y="79" fill="#F87171" font-size="8.5">🔗 job_id (FK→Job)</text>
+  <text x="270" y="93" fill="#94A3B8" font-size="8.5">  applicant_name</text>
+  <text x="270" y="107" fill="#94A3B8" font-size="8.5">  email · phone</text>
+  <text x="270" y="121" fill="#94A3B8" font-size="8.5">  cover_letter</text>
+  <text x="270" y="135" fill="#94A3B8" font-size="8.5">  resume_filename</text>
+  <text x="270" y="149" fill="#94A3B8" font-size="8.5">  applied_at</text>
+
+  <rect x="518" y="20" width="180" height="120" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(6,182,212,0.5)" stroke-width="1.5"/>
+  <rect x="518" y="20" width="180" height="28" rx="8" fill="rgba(6,182,212,0.18)"/>
+  <text x="608" y="38" fill="#67E8F9" font-size="10.5" text-anchor="middle" font-weight="700">🏷 CATEGORY</text>
+  <text x="526" y="64" fill="#FBBF24" font-size="8.5">🔑 cat_id</text>
+  <text x="526" y="79" fill="#94A3B8" font-size="8.5">  name</text>
+  <text x="526" y="93" fill="#94A3B8" font-size="8.5">  icon · color</text>
+  <text x="526" y="107" fill="#94A3B8" font-size="8.5">  job_count</text>
+  <text x="608" y="130" fill="#334155" font-size="7.5" text-anchor="middle">Static JSON reference</text>
+
+  <rect x="14" y="205" width="180" height="85" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(16,185,129,0.45)" stroke-width="1.5"/>
+  <rect x="14" y="205" width="180" height="28" rx="8" fill="rgba(16,185,129,0.15)"/>
+  <text x="104" y="223" fill="#6EE7B7" font-size="10.5" text-anchor="middle" font-weight="700">🔖 SAVED_JOBS</text>
+  <text x="22" y="249" fill="#FBBF24" font-size="8.5">  (localStorage key)</text>
+  <text x="22" y="264" fill="#94A3B8" font-size="8.5">  job_ids[] (array)</text>
+  <text x="22" y="279" fill="#94A3B8" font-size="8.5">  saved_at timestamps</text>
+
+  <rect x="518" y="160" width="180" height="130" rx="8" fill="rgba(15,22,42,0.95)" stroke="rgba(245,158,11,0.4)" stroke-width="1.5"/>
+  <rect x="518" y="160" width="180" height="28" rx="8" fill="rgba(245,158,11,0.12)"/>
+  <text x="608" y="178" fill="#FCD34D" font-size="10.5" text-anchor="middle" font-weight="700">🔍 FILTER_STATE</text>
+  <text x="526" y="204" fill="#94A3B8" font-size="8.5">  search_query</text>
+  <text x="526" y="219" fill="#94A3B8" font-size="8.5">  selected_category</text>
+  <text x="526" y="234" fill="#94A3B8" font-size="8.5">  job_type_filter</text>
+  <text x="526" y="249" fill="#94A3B8" font-size="8.5">  sort_order</text>
+  <text x="608" y="274" fill="#334155" font-size="7.5" text-anchor="middle">sessionStorage</text>
+  <text x="608" y="284" fill="#334155" font-size="7.5" text-anchor="middle">Client-side only</text>
+
+  <line x1="194" y1="90" x2="262" y2="90" stroke="#8B5CF6" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="228" y="84" fill="#8B5CF6" font-size="8" text-anchor="middle">1:M</text>
+  <line x1="447" y1="70" x2="518" y2="70" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="482" y="64" fill="#06B6D4" font-size="8" text-anchor="middle">M:1</text>
+  <line x1="104" y1="185" x2="104" y2="205" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="118" y="200" fill="#10B981" font-size="8">ref</text>
+</svg>
