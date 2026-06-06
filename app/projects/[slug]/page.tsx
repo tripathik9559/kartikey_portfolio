@@ -84,7 +84,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
                 </p>
 
                 <div className="flex flex-wrap gap-3">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href={project.github ?? undefined} target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <Github size={15} /> GitHub Repository
                   </a>
                   {project.liveDemo ? (
@@ -323,7 +323,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
 
                 {/* Links */}
                 <div className="mt-5 pt-4 space-y-2" style={{ borderTop: '1px solid rgba(59,130,246,0.08)' }}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
+                  <a href={project.github ?? undefined} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
                     <Github size={14} /> View on GitHub
                   </a>
                   {project.liveDemo && (
