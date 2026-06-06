@@ -171,7 +171,7 @@ export default function FeaturedProjects() {
                       </span>
                     )}
                     <a
-                      href={project.github}
+                      href={project.github ?? undefined}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-ghost py-1.5 flex-shrink-0"
