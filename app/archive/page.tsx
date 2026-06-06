@@ -20,7 +20,7 @@ const allArchiveItems = [
   })),
   ...extendedProjects.map((p) => ({
     name: p.title,
-    stack: p.tech.join(', '),
+    stack: (p.tech ?? p.techStack ?? []).join(', '),
     year: p.year,
     github: p.github,
     category: p.category,
