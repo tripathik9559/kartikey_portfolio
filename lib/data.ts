@@ -274,7 +274,7 @@ export const projects: Project[] = [
     status:    'In Progress',
     techStack: ['Python', 'Django', 'MySQL', 'AI/ML', 'Optimisation Algorithms', 'Data Visualisation'],
     category:  'AI/ML',
-    github:    null,
+    github:    'https://github.com/tripathik9559/AI-Train-Traffic-Control',
     liveDemo:  null,
     featured:  true,
     year:      2026,
